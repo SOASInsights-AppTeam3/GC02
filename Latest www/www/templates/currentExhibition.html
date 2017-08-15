@@ -1,0 +1,25 @@
+<ion-view id="page14">
+    <ion-nav-title>{{data.acf.name}}</ion-nav-title>
+    <ion-content padding="true" class="has-header">
+        <h3 id="currentExhibition1-heading2" style="color:#00859B;font-weight:600;">{{data.acf.name}}</h3>
+        <div id="currentExhibition1-markdown24" class="show-list-numbers-and-dots">
+            <p style="color:#000000;">{{data.acf.paragraph_description}}</p>
+        </div>
+        <div id="currentExhibition1-markdown25" class="show-list-numbers-and-dots"></div>
+        <div class="spacer" style="width: 300px; height: 8px;"></div>
+        <div id="currentExhibition1-markdown37" style="text-align:center;" class="show-list-numbers-and-dots">
+            <p style="color:#63666A;font-size:17px;">
+                <strong>Take a Quiz on the Exhibition</strong>
+            </p>
+        </div>
+        <a ng-href="#/soas-exhibitions/{{data.id}}/quiz" id="currentExhibition-button17" style="border-radius:0px 0px 0px 0px;" class="button button-energized button-quiz button-block">Quiz!</a>
+        <div class="spacer" style="width: 300px; height: 8px;"></div>
+        <ion-list id="currentExhibition1-list3">
+                <ion-item class="item-thumbnail-left item-text-wrap id="currentExhibition1-list-item27" ng-href="#/soas-exhibitions/{{data.id}}/{{itemPost}}/{{item.item_number}}/description" ng-repeat="item in itemData">
+                    <img src="http://soasinsights.azurewebsites.net{{item.picture}}">
+                    <h2>{{item.item_number}}. {{item.name_of_exhibit}}</h2>
+                    <p align="left">{{item.description}}</p>
+                </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

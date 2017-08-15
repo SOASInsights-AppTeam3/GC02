@@ -1,0 +1,35 @@
+<ion-view title="SOAS Exhibitions" id="page8">
+
+    <ion-content padding="true" class="has-header">
+
+        <h3 id="sOASExhibitions-heading3" style="color:#F2A900;font-weight:600;">Current Exhibitions</h3>
+        <div ng-repeat="exhibition in data" >
+
+            <div id="sOASExhibitions-container2">
+                <h4 id="sOASExhibitions-heading4" style="color:#00859B;font-weight:600;">{{exhibition.acf.name}}</h4>
+            </div>
+            <div id="sOASExhibitions-markdown3" class="show-list-numbers-and-dots">
+                <p style="color:#000000;">{{exhibition.acf.a_short_description_of_the_exhibition}}</p>
+            </div>
+
+            <div id="sOASExhibitions-markdown4" class="show-list-numbers-and-dots">
+                <p style="color:#63666A;">
+                   
+                    <strong>{{exhibition.acf.starting_date}} - {{exhibition.acf.ending_date}}</strong>
+                </p>
+            </div>
+            <div id="sOASExhibitions-markdown5" class="show-list-numbers-and-dots">
+                <p style="color:#63666A;">
+                    <strong>{{exhibition.acf.venue}}</strong>
+                </p>
+            </div>
+            <div style="display:block;width:100%;height:auto">
+                <a ng-href="#/soas-exhibitions/{{exhibition.id}}">
+                    <img src="http://soasinsights.azurewebsites.net{{exhibition.acf.cover_image_for_the_exhibition}}" width:auto height:auto>
+                </a>
+            </div>
+            <div class="spacer" style="width: 300px; height: 8px;"></div>
+        </div>
+    </ion-content>
+</ion-view>
+

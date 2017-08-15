@@ -1,0 +1,5 @@
+{
+  "name": "GC02SOASInsight",
+  "app_id": "",
+  "gulpStartupTasks": ["sass", "watch"] 
+}

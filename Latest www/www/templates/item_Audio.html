@@ -1,0 +1,27 @@
+<ion-view id="page33">
+    <ion-nav-title>{{specificitem.name_of_exhibit}} - Audio</ion-nav-title>
+    <ion-content padding="true" class="has-header">
+    <a ng-href="#/soas-exhibitions/{{exhibitionId}}" id="item-button47" class="button button-energized button-small button-block">Back to Exhibition Page</a>
+        <div id="ItemAudio-button-bar5" class="button-bar">
+            <a ng-href="#/soas-exhibitions/{{exhibitionId}}/{{url2}}/{{specificitem.item_number}}/description" id="itemAudio-button18" class="button button-stable button-small button-block">Description</a>
+            <a  id="itemAudio-button19" class="button button-energized button-small button-block">Audio</a>
+            <a ng-href="#/soas-exhibitions/{{exhibitionId}}/{{url2}}/{{specificitem.item_number}}/more" id="itemAudio-button20" class="button button-stable button-small button-block">More</a>
+        </div>
+        <h3 id="itemAudio-heading15" style="color:#00859B;font-weight:600;">{{specificitem.name_of_exhibit}}</h3>
+        <div id="itemAudio-markdown38" class="show-list-numbers-and-dots">
+            <p style="color:#000000;">{{specificitem.description}}</p>
+        </div>
+        <div>
+            <img src="http://soasinsights.azurewebsites.net{{specificitem.picture}}" style="display: block; width: auto; height: 150px; margin-left: auto; margin-right: auto;">
+        </div>
+        <div class="spacer" style="width: 300px; height: 11px;"></div>
+       
+        <div id="Audio-button-bar16" class="button-bar">
+      <button id="Audio-button69" class="button button-energized button-large button-block button-clear icon ion-ios-rewind" ng-disabled = "!remain_rewind" ng-click="Rewind()"></button>
+      <button id="Audio-button70" class="button button-energized button-large button-block button-clear icon ion-ios-play" ng-hide="!play" ng-click="playPause()"></button>
+      <button id="Audio-button71" class="button button-energized button-large button-block button-clear icon ion-ios-pause" ng-hide="play" ng-click="playPause()"></button>
+      <button id="Audio-button72" class="button button-energized button-large button-block button-clear icon ion-stop" ng-disabled="!start" ng-click="stopMedia()"></button>
+      <button id="Audio-button73" class="button button-energized button-large button-block button-clear icon ion-ios-fastforward" ng-disabled="!remain_forward" ng-click="FastFoward()"></button>
+      </div>
+    </ion-content>
+</ion-view>

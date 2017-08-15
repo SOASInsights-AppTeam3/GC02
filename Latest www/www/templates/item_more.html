@@ -1,0 +1,23 @@
+<ion-view id="page32">
+    <ion-nav-title>{{specificitem.name_of_exhibit}} - More</ion-nav-title>
+    <ion-content padding="true" class="has-header">
+    <a ng-href="#/soas-exhibitions/{{exhibitionId}}" id="item-button47" class="button button-energized button-small button-block">Back to Exhibition Page</a>
+        <div id="ItemMore-button-bar10" class="button-bar">
+            <a ng-href="#/soas-exhibitions/{{exhibitionId}}/{{url2}}/{{specificitem.item_number}}/description" id="itemMore-button45" class="button button-stable button-small button-block">Description</a>
+            <a ng-href="#/soas-exhibitions/{{exhibitionId}}/{{url2}}/{{specificitem.item_number}}/audio" id="itemMore-button46" class="button button-stable button-small button-block">Audio</a>
+            <a id="itemMore-button47" class="button button-energized button-small button-block">More</a>
+        </div>
+        <h3 id="itemMore-heading29" style="color:#00859B;font-weight:600;">{{specificitem.name_of_exhibit}}</h3>
+        <div id="itemMore-markdown52" class="show-list-numbers-and-dots">
+            <p style="color:#000000;">{{specificitem.description}}</p>
+        </div>
+         <div ng-repeat="v in specificitem.youtube_link" ng-bind-html="getTrustedHTML(publishVideo(v.video_link))">
+         </div>
+        <div class="spacer" style="width: 300px; height: 10px;"></div>
+        <h3 id="itemMore-heading30" style="color:#63666A;">More on this</h3>
+        <p ng-repeat = "link in specificitem.links">
+            <a href='{{link.web_link}}' location='yes' target="_system">{{link.title}}</a>
+            <br>
+        </p>
+    </ion-content>
+</ion-view>

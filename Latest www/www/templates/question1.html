@@ -1,0 +1,16 @@
+<ion-view id="page13">
+<ion-nav-title>Quiz on {{name}}</ion-nav-title>
+  <ion-content padding="true" class="has-header">
+    <h3 id="quiz-heading17" style="color:#00859B;font-weight:600;font-size:20px; ">Quiz on {{name}}</h3>
+   <h4 id="question-heading19" style="color:#00859B;font-weight:600;">{{questionNo + 1}}. {{questionShow}}</h4>
+    <form id="question3-form3" class="list" style="margin-top:1px;margin-bottom: 0px" >
+      <ion-radio class="item-text-wrap" ng-change="saveValue(checkedItem)" ng-model="checkedItem" id="quiz-checkbox9" ng-repeat = "choice in choiceShow"  value = "{{choice.choice}}">{{choice.choice}}</ion-radio>
+    </form>
+    <h4 id="message" style="color:#00859B;font-weight:600;">{{message}}</h4>
+        <p id="check" class="button button-energized  button-quiz button-block" ng-click="checkAnswer()" ng-disabled="!able_check">Check Answer</p>
+        <p id="next" class="button button-energized  button-quiz button-block" ng-click="displayNext()" ng-disabled="!able">{{NextButton}}</p>
+        <p id="prev" class="button button-energized  button-quiz button-block" ng-click="displayPrev()" ng-disabled="!able">Prev</p>
+        <p id="start" class="button button-energized  button-quiz button-block" ng-click="startOver()" ng-disabled="!finish">Start Over</p>
+
+  </ion-content>
+</ion-view>

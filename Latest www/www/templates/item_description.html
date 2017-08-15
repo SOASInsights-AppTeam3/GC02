@@ -1,0 +1,22 @@
+<ion-view id="page33" >
+    <ion-nav-title>{{specificitem.name_of_exhibit}}</ion-nav-title>
+  <ion-content padding="true" class="has-header">
+  <a ng-href="#/soas-exhibitions/{{exhibitionId}}" id="item-button47" class="button button-energized button-small button-block">Back to Exhibition Page</a>
+    <div id="item-button-bar11" class="button-bar">
+        <a id="item-button48" class="button button-energized button-small button-block">Description</a>
+        <a ng-href="#/soas-exhibitions/{{exhibitionId}}/{{url2}}/{{specificitem.item_number}}/audio" id="item-button49" class="button button-stable button-small button-block" >Audio</a>
+        <a ng-href="#/soas-exhibitions/{{exhibitionId}}/{{url2}}/{{specificitem.item_number}}/more" id="item-button50" class="button button-stable button-small button-block">More</a>
+</div>
+    <h3 id="item-heading31" style="color:#00859B;font-weight:600;">{{specificitem.name_of_exhibit}}</h3>
+    <div id="item-markdown54" class="show-list-numbers-and-dots">
+      <p style="color:#000000;">{{specificitem.description}}</p>
+    </div>
+    <div>
+      <img src="http://soasinsights.azurewebsites.net{{specificitem.picture}}" style="display: block; width: auto; height: 150px; margin-left: auto; margin-right: auto;">
+    </div>
+    <div class="spacer" style="width: 300px; height: 10px;"></div>
+    <div id="item-markdown55" class="show-list-numbers-and-dots">
+      <p style="color:#000000;" align="justify">{{paragraph}}</p>
+    </div>
+  </ion-content>
+</ion-view>
